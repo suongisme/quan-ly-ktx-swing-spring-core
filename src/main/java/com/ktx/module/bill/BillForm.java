@@ -163,7 +163,7 @@ public class BillForm extends JDialog {
 	
 	
 	private void fillDataToCbx() {
-		this.comboBox.removeAll();
+		this.comboBox.removeAllItems();
 		this.roomService.findAll("")
 			.forEach(this.comboBox::addItem);
 		this.comboBox.setSelectedIndex(0);
