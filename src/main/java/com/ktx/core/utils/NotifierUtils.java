@@ -9,6 +9,8 @@ import javax.swing.*;
 @RequiredArgsConstructor
 public class NotifierUtils {
 
+    public static final int EXIST_OPTION = -1;
+
     private final SystemUtils systemUtils;
 
     public void success(String title, String message) {
@@ -22,6 +24,10 @@ public class NotifierUtils {
     }
     
     public int confirmNotInput(String title, String message) {
-    	return JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        int i = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+        if (i == EXIST_OPTION) {
+            return JOptionPane.NO_OPTION;
+        }
+        return i;
     }
 }

@@ -91,7 +91,7 @@ public class RoomForm extends JDialog {
 			contentPanel.add(lblGithng);
 		}
 		{
-			txtPrice = new JTextField();
+			txtPrice = new NonNullTextField();
 			txtPrice.setColumns(10);
 			txtPrice.setBounds(227, 142, 197, 29);
 			contentPanel.add(txtPrice);

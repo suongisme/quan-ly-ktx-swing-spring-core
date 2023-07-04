@@ -151,7 +151,7 @@ public class StudentForm extends JDialog {
 	}
 
 	private void fillSelectBox() {
-		this.comboBox.removeAll();
+		this.comboBox.removeAllItems();
 		this.roomService.findAll("")
 				.forEach(this.comboBox::addItem);
 		this.comboBox.setSelectedIndex(0);

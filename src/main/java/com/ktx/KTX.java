@@ -1,7 +1,6 @@
 package com.ktx;
 
 import com.ktx.core.config.RootConfig;
-import com.ktx.core.view.HomeView;
 import com.ktx.module.auth.LoginView;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,7 +12,7 @@ public class KTX {
     public static void main(String[] args) {
         setupTheme();
         ApplicationContext context = new AnnotationConfigApplicationContext(RootConfig.class);
-        HomeView loginView = context.getBean(HomeView.class);
+        LoginView loginView = context.getBean(LoginView.class);
         loginView.setVisible(true);
     }
     
